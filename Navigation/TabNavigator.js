@@ -1,5 +1,5 @@
 import React from 'react';
-import StyleSheet from 'react-native';
+import {StyleSheet} from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CreatePost from '../Screens/CreatePost';
@@ -25,16 +25,15 @@ screenOptions={({ route }) => ({
         ? 'create'
         : 'create-outline';
     }
-    return <Ionicons name={iconName} size={size} color={color} />;
+    return <Ionicons name={iconName} size={RFValue(20)} color={color} style={styles.icons} />;
   },
 })}
-tabBarOptions={{
-  activeTintColor: 'orange',
-  inactiveTintColor: 'gray',
-}}
+  activeColor={"#ee8249"}
+  inactiveColor={"gray"}
 >
 <materialTab.Screen name="Feed" component={Feed} />
 <materialTab.Screen name="CreatePost" component={CreatePost} />
+  
 </materialTab.Navigator>
 )
 }
