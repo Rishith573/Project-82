@@ -21,7 +21,7 @@ export default class PostCard extends React.Component{
                     </View>
                     <Image source={require("../assets/post.jpeg")} style={styles.postImage}/>
                     <View>
-                        <Text styles={styles.captionText}>{this.props.post.caption}</Text>
+                        <Text style={styles.captionText}>{this.props.post.caption}</Text>
                     </View>
                     <View style={styles.actionContainer}>
                         <View style={styles.likeButton}>
